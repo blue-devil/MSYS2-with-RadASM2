@@ -1,3 +1,39 @@
+;  _______________________________________________________________________
+; |  ______ __           ,.'   __.'.__  .   ______               ___      |
+; | |      |  |          /b`  '-.   .-'  d\|      ;             |   |     |
+; | |   __ |  |         .5h     /.'.\    =5|   _   \            |   |     |
+; | |.  1 \|  |         (0=h    '   '    =C)   1\   \        .--:.  |     |
+; | |   1_/|  |         ?3==,          .==7|   | \   \       |__|   |     |
+; | |.     |  .-- -.-----{=`==oo____oo==`=}|   |  |.----.-- -.--:.  |     |
+; | |.  __ |  |  V |  ^__|'"o58888888888,; |.  |  ||  ^_|  V |  |.  |     |
+; | |:  1 \|__|____|_____| `?88P^\,?88^\P  |.  | / |____|\___|__|:  |___  |
+; | |:  1_/   /             C8?\__d88\_/'  |:  1/   / .         |:  1   | |
+; | |::.. .  /              `8o8888/\88P   |::.. . /            |::.. . | |
+; | `-------'                '7oo88oo8P    `------'             `-------' |
+; |                      Cooo##~\/\/\/~====>        github.com/blue-devil |
+; |                                                  gitlab.com/bluedevil |
+; | Freedom doesn't come from second-hand thoughts.       www.sctzine.com |
+; |_______________________________________________________________________|
+; | @author   : Blue DeviL <bluedevil@sctzine.com>                        |
+; | @tester   : ErrorInside <errorinside@sctzine.com>                     |
+; | @IDE      : RadASM v2.2.2.4                                           |
+; | @template : Blue DeviL                                                |
+; | @date     : 20/10/2022                                                |
+; | @license  : GPLv3                                                     |
+; |_______________________________________________________________________|
+; |                                                                       |
+; |           WinAPI Structures for RadASM2 with MSYS2/MINGw64            |
+; |                                                                       |
+; | This file contains WinAPI structures from M$ Docs with their          |
+; | parameters. With this file RadASM2 can code complete and              |
+; | help developer with a dropdown menu which shows parameters            |
+; | of that structure.                                                    |
+; |                                                                       |
+; | This file can also contain some common structures from C runtime  or  |
+; | other third party libraries.                                          |
+; |                                                                       |
+; | TODO: If this file gets bigger make a separate file for other strucs. |
+; \_______________________________________________________________________/
 ABC,abcA,abcB,abcC
 ABCFLOAT,abcfA,abcfB,abcfC
 ACCEL,fVirt,key,cmd
@@ -50,6 +86,7 @@ AT_INFO,JobTime,DaysOfMonth,DaysOfWeek,Flags,Command
 AUDIT_ENTRY,ae_len,ae_reserved,ae_time,ae_type,ae_data_offset,ae_data_size
 AUXCAPS,wMid,wPid,vDriverVersion,szPname,wTechnology,dwSupport
 AUXCAPSA,wMid,wPid,vDriverVersion,szPname,wTechnology,dwSupport
+BIDIOPTIONS,cbSize,wMask,wEffects
 BITMAP,bmType,bmWidth,bmHeight,bmWidthBytes,bmPlanes,bmBitsPixel,bmBits
 BITMAPCOREHEADER,bcSize,bcWidth,bcHeight,bcPlanes,bcBitCount
 BITMAPCOREINFO,bmciHeader:BITMAPCOREHEADER,bmciColors:RGBTRIPLE
@@ -66,6 +103,8 @@ BROWSER_STATISTICS,StatisticsStartTime:LARGE_INTEGER,NumberOfServerAnnouncements
 BROWSER_STATISTICS_100,StartTime:LARGE_INTEGER,NumberOfServerAnnouncements:LARGE_INTEGER,NumberOfDomainAnnouncements:LARGE_INTEGER,NumberOfElectionPackets,NumberOfMailslotWrites,NumberOfGetBrowserServerListRequests,NumberOfIllegalDatagrams:LARGE_INTEGER
 BROWSER_STATISTICS_101,StartTime:LARGE_INTEGER,NumberOfServerAnnouncements:LARGE_INTEGER,NumberOfDomainAnnouncements:LARGE_INTEGER,NumberOfElectionPackets,NumberOfMailslotWrites,NumberOfGetBrowserServerListRequests,NumberOfIllegalDatagrams:LARGE_INTEGER,NumberOfMissedServerAnnouncements,NumberOfMissedMailslotDatagrams,NumberOfMissedGetBrowserServerListRequests,NumberOfFailedServerAnnounceAllocations,NumberOfFailedMailslotAllocations,NumberOfFailedMailslotReceives,NumberOfFailedMailslotWrites,NumberOfFailedMailslotOpens,NumberOfDuplicateMasterAnnouncements
 BSTRBLOB,cbSize,pData
+BUTTON_IMAGELIST,himl,margin,uAlign
+BUTTON_SPLITINFO,mask,himlGlyph,uSplitStyle,size
 BYTE_BLOB,clSize,abData
 BYTE_SIZEDARR,clSize,pData
 BY_HANDLE_FILE_INFORMATION,dwFileAttributes,ftCreationTime:FILETIME,ftLastAccessTime:FILETIME,ftLastWriteTime:FILETIME,dwVolumeSerialNumber,nFileSizeHigh,nFileSizeLow,nNumberOfLinks,nFileIndexHigh,nFileIndexLow
@@ -74,15 +113,16 @@ CANDIDATELIST,dwSize,dwStyle,dwCount,dwSelection,dwPageStart,dwPageSize,dwOffset
 CBTACTIVATESTRUCT,fMouse,hWndActive
 CBT_CREATEWND,lpcs,hWndInsertAfter
 CBT_CREATEWNDA,lpcs,hWndInsertAfter
+CHANGENOTIFY,dwChangeType,pvCookieData
 CHARDEVQ_INFO_0,cq0_dev
 CHARDEVQ_INFO_1,cq1_dev,cq1_priority,cq1_devs,cq1_numusers,cq1_numahead
 CHARDEVQ_INFO_1002,cq1002_priority
 CHARDEVQ_INFO_1003,cq1003_devs
 CHARDEV_INFO_0,ch0_dev
 CHARDEV_INFO_1,ch1_dev,ch1_status,ch1_username,ch1_time
-CHARFORMAT,cbSize,dwMask,dwEffects,yHeight,yOffset,crTextColor,bCharSet,bPitchAndFamily,szFaceName,_wPad2
+CHARFORMAT,cbSize,dwMask,dwEffects,yHeight,yOffset,crTextColor,bCharSet,bPitchAndFamily,szFaceName
 CHARFORMAT2,cbSize,dwMask,dwEffects,yHeight,yOffset,crTextColor,bCharSet,bPitchAndFamily,szFaceName,_wPad2,wWeight,sSpacing,crBackColor,lcid,dwReserved,sStyle,wKerning,bUnderlineType,bAnimation,bRevAuthor,bReserved1
-CHARFORMATA,cbSize,dwMask,dwEffects,yHeight,yOffset,crTextColor,bCharSet,bPitchAndFamily,szFaceName,_wPad2
+CHARFORMATA,cbSize,dwMask,dwEffects,yHeight,yOffset,crTextColor,bCharSet,bPitchAndFamily,szFaceName
 CHARRANGE,cpMin,cpMax
 CHARSETINFO,ciCharset,ciACP,xlfs:FONTSIGNATURE
 CHAR_INFO,Char:CHARTYPE,Attributes
@@ -94,6 +134,7 @@ CIDA,cidl,aoffset
 CIEXYZ,ciexyzX,ciexyzY,ciexyzZ
 CIEXYZTRIPLE,ciexyzRed:CIEXYZ,ciexyzGreen:CIEXYZ,ciexyzBlue:CIEXYZ
 CLIENTCREATESTRUCT,hWindowMenu,idFirstChild
+CLIPBOARDFORMAT,nmhdr:NMHDR,cf
 CLIPDATA,cbSize,ulClipFmt,pClipData
 CLSID,Data1,Data2,Data3,Data4
 CMINVOKECOMMANDINFO,cbSize,fMask,hwnd,lpVerb,lpParameters,lpDirectory,nShow,dwHotKey,hIcon
@@ -103,8 +144,10 @@ COAUTHINFO,dwAuthnSvc,dwAuthzSvc,pwszServerPrincName,dwAuthnLevel,dwImpersonatio
 COLORADJUSTMENT,caSize,caFlags,caIlluminantIndex,caRedGamma,caGreenGamma,caBlueGamma,caReferenceBlack,caReferenceWhite,caContrast,caBrightness,caColorfulness,caRedGreenTint
 COLORMAP,From,To
 COLORSCHEME,dwSize,clrBtnHighlight,clrBtnShadow
+COMBOBOXINFO,cbSize,rcItem:RECT,rcButtonRECT,stateButton,hwndCombo,hwndItem,hwndList
 COMBOBOXEXITEM,_mask,iItem,pszText,cchTextMax,iImage,iSelectedImage,iOverlay,iIndent,lParam
 COMBOBOXEXITEMA,_mask,iItem,pszText,cchTextMax,iImage,iSelectedImage,iOverlay,iIndent,lParam
+COMBOBOXEXITEMW,_mask,iItem,pszText,cchTextMax,iImage,iSelectedImage,iOverlay,iIndent,lParam
 COMMCONFIG,dwSize,wVersion,wReserved,dcbx:DCB,dwProviderSubType,dwProviderOffset,dwProviderSize,wcProviderData
 COMMPROP,wPacketiLength,wPacketVersion,dwServiceMask,dwReserved1,dwMaxTxQueue,dwMaxRxQueue,dwMaxBaud,dwProvSubType,dwProvCapabilities,dwSettableParams,dwSettableBaud,wSettableData,wSettableStopParity,dwCurrentTxQueue,dwCurrentRxQueue,dwProvSpec1,dwProvSpec2,wcProvChar
 COMMTIMEOUTS,ReadIntervalTimeout,ReadTotalTimeoutMultiplier,ReadTotalTimeoutConstant,WriteTotalTimeoutMultiplier,WriteTotalTimeoutConstant
@@ -145,6 +188,7 @@ CY,Lo,Hi,int64
 DATATYPES_INFO_1,pName
 DATATYPES_INFO_1A,pName
 DATE_STRUCT,year,month,day
+DATETIMEPICKERINFO,cbSize,rcCheck:RECT,stateCheck,rcButton:RECT,hwndEdit,hwndUD,hwndDropDown
 DCB,DCBlength,BaudRate,fbits:BITRECORD,wReserved,XonLim,XoffLim,ByteSize,Parity,StopBits,XonChar,XoffChar,ErrorChar,EofChar,EvtChar,wReserved1
 DDEACK,dw
 DDEADVISE,dd
@@ -154,6 +198,7 @@ DDEML_MSG_HOOK_DATA,uiLo,uiHi,cbData,xData
 DDEPOKE,dd,db
 DDEUP,dd,db
 DEBUGHOOKINFO,hModuleHook,Reserved,lParam,wParam,code
+DEBUGSTRUCT,Exception:EXCEPTION_DEBUG_INFO,CreateThread:CREATE_THREAD_DEBUG_INFO,CreateProcessInfo:CREATE_PROCESS_DEBUG_INFO,ExitThread:EXIT_THREAD_DEBUG_INFO,ExitProcess:EXIT_PROCESS_DEBUG_INFO,LoadDll:LOAD_DLL_DEBUG_INFO,UnloadDll:UNLOAD_DLL_DEBUG_INFO,DebugString:OUTPUT_DEBUG_STRING_INFO,RipInfo:RIP_INFO
 DEBUG_EVENT,dwDebugEventCode,dwProcessId,dwThreadId,u:DEBUGSTRUCT
 DELETEITEMSTRUCT,CtlType,CtlID,itemID,hwndItem,itemData
 DESKBANDINFO,dwMask,ptMinSize:POINT,ptMaxSize:POINT,ptIntegral:POINT,ptActual:POINT,wszTitle,dwModeFlags,crBkgnd
@@ -211,6 +256,7 @@ DTCTL,ulCtlType,ulCtlFlags,lpbNotif,cbNotif,lpszFilter,ulItemID,ctl.lpv,ctl.lpla
 DTPAGE,cctl,lpszResourceName,lpszComponent,ulItemID,lpctl
 DWORD_BLOB,clSize,alData
 DWORD_SIZEDARR,clSize,pData
+EDITBALLOONTIP,cbStruct,pszTitle,pszText,ttiIcon
 EDITSTREAM,dwCookie,dwError,pfnCallback
 EMR,iType,nSize
 EMRABORTPATH,emr:EMR
@@ -314,11 +360,14 @@ EMRSTROKEPATH,emr:EMR,rclBounds:RECTL
 EMRTEXT,ptlReference:POINTL,nchars,offString,fOptions,ircl:RECTL,offDx
 EMRWIDENPATH,emr:EMR
 ENCORRECTTEXT,nmhdr:NMHDR,chrg:CHARRANGE,seltyp
+ENDCOMPOSITIONNOTIFY,nmhdr:NMHDR,dwCode
 ENDROPFILES,nmhdr:NMHDR,hDrop,cp,fProtected
 ENHMETAHEADER,iType,nSize,rclBounds:RECTL,rclFrame:RECTL,dSignature,nVersion,nBytes,nRecords,nHandles,sReserved,nDescription,offDescription,nPalEntries,szlDevice:SIZEL,szlMillimeters:SIZEL,cbPixelFormat,offPixelFormat,bOpenGL
 ENHMETARECORD,iType,nSize,dParm1
+ENLINK,nmhdr:NMHDR,msg,wParam,lParam,chrg:CHARRANGE
+ENLOWFIRTF,nmhdr:NMHDR,szControl
 ENOLEOPFAILED,nmhdr:NMHDR,iob,lOper,hr
-ENPROTECTED,nmhdr:NMHDR,msg,wPad1,wParam,wPad2,lParam,chrg:CHARRANGE
+ENPROTECTED,nmhdr:NMHDR,msg,wParam,lParam,chrg:CHARRANGE
 ENSAVECLIPBOARD,nmhdr:NMHDR,cObjectCount,cch
 ENTRYID,abFlags,ab
 ENUMLOGFONT,elfLogFont:LOGFONTA,elfFullName,elfStyle
@@ -380,6 +429,7 @@ GCP_RESULTS,lStructSize,lpOutString,lpOrder,lpDX,lpCaretPos,lpClass,lpGlyphs,nGl
 GCP_RESULTSA,lStructSize,lpOutString,lpOrder,lpDX,lpCaretPos,lpClass,lpGlyphs,nGlyphs,nMaxFit
 GDI_NONREMOTE,fContext,u.hInproc,u.hRemote
 GENERIC_MAPPING,GenericRead,GenericWrite,GenericExecute,GenericAll
+GETCONTEXTMENUEX,chrg:CHARRANGE,dwFlags,pt:POINT,pvReserved;
 GETTEXTEX,cb,flags,codepage,lpDefaultChar,lpUsedDefChar
 GETTEXTLENGTHEX,flags,codepage
 GLYPHMETRICS,gmBlackBoxX,gmBlackBoxY,gmptGlyphOrigin:POINT,gmCellIncX,gmCellIncY
@@ -436,6 +486,7 @@ HLOG,time,last_flags,offset1,rec_offset
 HSZPAIR,hszSvc,hszTopic
 HTTP_VERSION_INFO,dwMajorVersion,dwMinorVersion
 HYPER_SIZEDARR,clSize,pData
+HYPHENATEINFO,cbSize,dxHyphenateZone,pfnHyphenate
 ICMP_ECHO_REPLY,Address,Status,RoundTripTime,DataSize,Reserved,DataPointer,Options,zData
 ICMP_OPTIONS,Ttl,Tos,Flags,OptionsSize,OptionsData
 ICONINFO,fIcon,xHotspot,yHotspot,hbmMask,hbmColor
@@ -448,6 +499,7 @@ IMAGEHLP_LINE,SizeOfStruct,Key,LineNumber,FileName,Address
 IMAGEHLP_MODULE,SizeOfStruct,BaseOfImage,ImageSize,TimeDateStamp,CheckSum,NumSyms,SymType1,ModuleName,ImageName,LoadedImageName
 IMAGEHLP_SYMBOL,SizeOfStruct,Address,Size1,Flags,MaxNameLength,Name1
 IMAGEINFO,hbmImage,hbmMask,Unused1,Unused2,rcImage:RECT
+IMAGELISTDRAWPARAMS,cbSize,himl,i,hdcDst,x,y,_cx,cy,xBitmap,yBitmap,rgbBk,rgbFg,fStyle,dwRop,fState,Frame,crEffect
 IMAGELISTDRADWORDS,cbSize,himl,i,hdcDst,x,y,_cx,cy,xBitmap,yBitmap,rgbBk,rgbFg,fStyle,dwRop
 IMAGE_ARCHIVE_MEMBER_HEADER,Name1,Date,UserID,GroupID,Mode,Size1,EndHeader
 IMAGE_AUX_SYMBOL,Sym.TagIndex,Sym.Misc.LnSz.Linenumber,Sym.Misc.LnSz.Size1,Sym.Misc.TotalSize,Sym.FcnAry.Function.PointerToLinenumber,Sym.FcnAry.Function.PointerToNextFunction,Sym.FcnAry.Array.Dimension,Sym.TvIndex,File.Name1,Section.Length1,Section.NumberOfRelocations,Section.NumberOfLinenumbers,Section.CheckSum,Section.Number,Section.Selection
@@ -489,6 +541,7 @@ IMAGE_THUNK_DATA32,u1.ForwarderString,u1.Function,u1.Ordinal,u1.AddressOfData
 IMAGE_TLS_DIRECTORY,StartAddressOfRawData,EndAddressOfRawData,AddressOfIndex,AddressOfCallBacks,SizeOfZeroFill,Characteristics
 IMAGE_TLS_DIRECTORY32,StartAddressOfRawData,EndAddressOfRawData,AddressOfIndex,AddressOfCallBacks,SizeOfZeroFill,Characteristics
 IMAGE_VXD_HEADER,e32_magic,e32_border,e32_worder,e32_level,e32_cpu,e32_os,e32_ver,e32_mflags,e32_mpages,e32_startobj,e32_eip,e32_stackobj,e32_esp,e32_pagesize,e32_lastpagesize,e32_fixupsize,e32_fixupsum,e32_ldrsize,e32_ldrsum,e32_objtab,e32_objcnt,e32_objmap,e32_itermap,e32_rsrctab,e32_rsrccnt,e32_restab,e32_enttab,e32_dirtab,e32_dircnt,e32_fpagetab,e32_frectab,e32_impmod,e32_impmodcnt,e32_impproc,e32_pagesum,e32_datapage,e32_preload,e32_nrestab,e32_cbnrestab,e32_nressum,e32_autodata,e32_debuginfo,e32_debuglen,e32_instpreload,e32_instdemand,e32_heapsize,e32_res3,e32_winresoff,e32_winreslen,e32_devid,e32_ddkver
+IMECOMPTEXT,cb,flags
 IMPORT_OBJECT_HEADER,Sig1,Sig2,Version,Machine,TimeDateStamp,SizeOfData,Ordinal,Hint,rImport:ImportRec
 INITCOMMONCONTROLSEX,dwSize,dwICC
 INTERNET_ASYNC_RESULT,dwResult,dwError
@@ -524,7 +577,9 @@ LARGE_INTEGER,QuadPart
 LAYERPLANEDESCRIPTOR,nSize,nVersion,dwFlags,iPixelType,cColorBits,cRedBits,cRedShift,cGreenBits,cGreenShift,cBlueBits,cBlueShift,cAlphaBits,cAlphaShift,cAccumBits,cAccumRedBits,cAccumGreenBits,cAccumBlueBits,cAccumAlphaBits,cDepthBits,cStencilBits,cAuxBuffers,iLayerPlane,bReserved,crTransparent
 LDT_BYTES,BaseMid,Flags1,Flags2,BaseHi
 LDT_ENTRY,LimitLow,BaseLow,HighWord1.Bytes:LDT_BYTES,HighWord1.Bits:LDTBits
+LHITTESTINFO,pt:POINT,item
 LIST_ENTRY,Flink,Blink
+LITEM,mask,iLink,state,stateMask,szID,szUrl
 LOADED_IMAGE,ModuleName,hFile,MappedAddress,FileHeader,LastRvaSection,NumberOfSections,Sections,Characteristics,fSystemImage,align,fDOSImage,Links,SizeOfImage
 LOAD_DLL_DEBUG_INFO,hFile,lpBaseOfDll,dwDebugInfoFileOffset,nDebugInfoSize,lpImageName,fUnicode
 LOCALESIGNATURE,lsUsb4,lsCsbDefault,lsCsbSupported
@@ -562,7 +617,8 @@ MAPIINIT_0,ulVersion,ulFlags
 MAPINAMEID,lpguid,ulKind,Kind.lID,Kind.lpwstrName
 MAPIUID,ab
 MAT2,eM11:FIXED,eM12:FIXED,eM21:FIXED,eM22:FIXED
-MCHITTESTINFO,cbSize,pt:POINT,uHit,_st:SYSTEMTIME
+MCGRIDINFO,cbSize,dwPart,dwFlags,iCalendar,iRow,iCol,bSelected,stStart:SYSTEMTIME,stEnd:SYSTEMTIME,rc:RECT,pszName,cchName
+MCHITTESTINFO,cbSize,pt:POINT,uHit,_st:SYSTEMTIME,rc:RECT,iOffset,iRow,iCol
 MCI_ANIM_OPEN_PARMS,dwCallback,wDeviceID,lpstrDeviceType,lpstrElementName,lpstrAlias,dwStyle,hWndParent
 MCI_ANIM_OPEN_PARMSA,dwCallback,wDeviceID,lpstrDeviceType,lpstrElementName,lpstrAlias,dwStyle,hWndParent
 MCI_ANIM_PLAY_PARMS,dwCallback,dwFrom,dwTo,dwSpeed
@@ -666,11 +722,13 @@ MONITOR_INFO_2A,pName,pEnvironment,pDLLName
 MONLINKSTRUCT,cb,dwTime,htask,fEstablished,fNoData,hszSvc,hszTopic,hszItem,wFmt,fServer,hConvServer,hConvClient
 MONMSGSTRUCT,cb,hwndTo,dwTime,htask,wMsg,wParam,lParam,dmhd:DDEML_MSG_HOOK_DATA
 MOUSEHOOKSTRUCT,pt:POINT,hwnd,wHitTestCode,dwExtraInfo
+MSLLHOOKSTRUCT,pt:POINT,mouseData,flags,time,dwExtraInfo
 MOUSEKEYS,cbSize,dwFlags,iMaxSpeed,iTimeToMaxSpeed,iCtrlSpeed,dwReserved1,dwReserved2
 MOUSE_EVENT_RECORD,dwMousePosition:COORD,dwButtonState,dwControlKeyState,dwEventFlags
 MSG,hwnd,message,wParam,lParam,time,pt:POINT
 MSGBOXPARAMS,cbSize,hwndOwner,hInstance,lpszText,lpszCaption,dwStyle,lpszIcon,dwContextHelpId,lpfnMsgBoxCallback,dwLanguageId
 MSGBOXPARAMSA,cbSize,hwndOwner,hInstance,lpszText,lpszCaption,dwStyle,lpszIcon,dwContextHelpId,lpfnMsgBoxCallback,dwLanguageId
+MSGBOXPARAMSW,cbSize,hwndOwner,hInstance,lpszText,lpszCaption,dwStyle,lpszIcon,dwContextHelpId,lpfnMsgBoxCallback,dwLanguageId
 MSGFILTER,nmhdr:NMHDR,msg,wParam,lParam
 MSG_INFO_0,msgi0_name
 MSG_INFO_1,msgi1_name,msgi1_forward_flag,msgi1_forward
@@ -702,25 +760,44 @@ NEWTEXTMETRIC,tmHeight,tmAscent,tmDescent,tmInternalLeading,tmExternalLeading,tm
 NEWTEXTMETRICA,tmHeight,tmAscent,tmDescent,tmInternalLeading,tmExternalLeading,tmAveCharWidth,tmMaxCharWidth,tmWeight,tmOverhang,tmDigitizedAspectX,tmDigitizedAspectY,tmFirstChar,tmLastChar,tmDefaultChar,tmBreakChar,tmItalic,tmUnderlined,tmStruckOut,tmPitchAndFamily,tmCharSet,ntmFlags,ntmSizeEM,ntmCellHeight,ntmAveWidth
 NEWTEXTMETRICEX,ntmTm:NEWTEXTMETRICA,ntmFontSig:FONTSIGNATURE
 NEWTEXTMETRICEXA,ntmTm:NEWTEXTMETRICA,ntmFontSig:FONTSIGNATURE
+NMBCDROPDOWN,hdr,rcButton
+NMBCHOTITEM,hdr,dwFlags
 NMBYTE,hdr:NMHDR,_ch,dwItemPrev,dwItemNext
+NMCBEDRAGBEGIN,hdr:NMHDR,iItemid,szText
+NMCBEDRAGBEGINA,hdr:NMHDR,iItemid,szText
+NMCBEDRAGBEGINW,hdr:NMHDR,iItemid,szText
+NMCBEENDEDIT,hdr:NMHDR,fChanged,iNewSelection,szText,iWhy
+NMCBEENDEDITA,hdr:NMHDR,fChanged,iNewSelection,szText,iWhy
+NMCBEENDEDITW,hdr:NMHDR,fChanged,iNewSelection,szText,iWhy
 NMCLICK,hdr:NMHDR,dwItemSpec,dwItemData,pt:POINT,dwHitInfo
 NMCOMBOBOXEX,hdr:NMHDR,ceItem:COMBOBOXEXITEMA
 NMCOMBOBOXEXA,hdr:NMHDR,ceItem:COMBOBOXEXITEMA
+NMCOMBOBOXEXW,hdr:NMHDR,ceItem:COMBOBOXEXITEMA
 NMCUSTOMDRAW,hdr:NMHDR,dwDrawStage,hdc,rc:RECT,dwItemSpec,uItemState,lItemlParam
 NMDATETIMECHANGE,nmhdr:NMHDR,dwFlags,_st:SYSTEMTIME
 NMDATETIMEFORMAT,nmhdr:NMHDR,pszFormat,_st:SYSTEMTIME,pszDisplay,szDisplay
 NMDATETIMEFORMATA,nmhdr:NMHDR,pszFormat,_st:SYSTEMTIME,pszDisplay,szDisplay
+NMDATETIMEFORMATW,nmhdr:NMHDR,pszFormat,_st:SYSTEMTIME,pszDisplay,szDisplay
+NMDATETIMEFORMATQUERY,nmhdr:NMHDR,pszFormat,szMax
+NMDATETIMEFORMATQUERYA,nmhdr:NMHDR,pszFormat,szMax
+NMDATETIMEFORMATQUERYW,nmhdr:NMHDR,pszFormat,szMax
 NMDATETIMESTRING,nmhdr:NMHDR,pszUserString,_st:SYSTEMTIME,dwFlags
 NMDATETIMESTRINGA,nmhdr:NMHDR,pszUserString,_st:SYSTEMTIME,dwFlags
+NMDATETIMESTRINGW,nmhdr:NMHDR,pszUserString,_st:SYSTEMTIME,dwFlags
+NMDATETIMEWMKEYDOWN,nmhdr:NMHDR,nVirtKey,pszFormat,_st:SYSTEMTIME
 NMDATETIMEWMKEYDOWNA,nmhdr:NMHDR,nVirtKey,pszFormat,_st:SYSTEMTIME
+NMDATETIMEWMKEYDOWNW,nmhdr:NMHDR,nVirtKey,pszFormat,_st:SYSTEMTIME
+NMDAYSTATE,nmhdr:NMHDR,stStart:SYSTEMTIME,cDayState,prgDayState
 NMDWORDESS,hdr:NMHDR,iField,iValue
 NMHDDISPINFO,hdr:NMHDR,iItem,_mask,pszText,cchTextMax,iImage,lParam
 NMHDDISPINFOA,hdr:NMHDR,iItem,_mask,pszText,cchTextMax,iImage,lParam
 NMHDFILTERBTNCLICK,hdr:NMHDR,iItem,rc:RECT
 NMHDR,hwndFrom,idFrom,code
 NMHEADER,hdr:NMHDR,iItem,iButton,pitem
+NMIPADDRESS,hdr:NMHDR,iField,iValue
 NMITEMACTIVATE,hdr:NMHDR,iItem,iSubItem,uNewState,uOldState,uChanged,ptAction:POINT,lParam,uKeyFlags
 NMKEY,hdr:NMHDR,nVKey,uFlags
+NMLINK,hdr:NMHDR,item
 NMLISTVIEW,hdr:NMHDR,iItem,iSubItem,uNewState,uOldState,uChanged,ptAction:POINT,lParam
 NMLVCACHEHDWORD,hdr:NMHDR,iFrom,iTo
 NMLVCUSTOMDRAW,nmcd:NMCUSTOMDRAW,clrText,clrTextBk,iSubItem
@@ -730,12 +807,16 @@ NMLVKEYDOWN,hdr:NMHDR,wVKey,flags
 NMLVODSTATECHANGE,hdr:NMHDR,iFrom,iTo,uNewState,uOldState
 NMMOUSE,hdr:NMHDR,dwItemSpec,dwItemData,pt:POINT,dwHitInfo
 NMPGCALCSIZE,hdr:NMHDR,dwFlag,iWidth,iHeight
+NMPGHOTITEM,hdr:NMHDR,idOld,idNew,dwFlags;
 NMPGSCROLL,hdr:NMHDR,fwKeys,rcParent:RECT,iDir,iXpos,iYpos,iScroll
 NMRBAUTOSIZE,hdr:NMHDR,fChanged,rcTarget:RECT,rcActual:RECT
 NMREBAR,hdr:NMHDR,dwMask,uBand,fStyle,wID,lParam
+NMREBARAUTOBREAK,hdr:NMHDR,uBand,wID,lParam,uMsg,fStyleCurrent,fAutoBreak
 NMREBARCHEVRON,hdr:NMHDR,uBand,wID,lParam,rc:RECT,lParamNM
 NMREBARCHILDSIZE,hdr:NMHDR,uBand,wID,rcChild:RECT,rcBand:RECT
+NMREBARSPLITTER,hdr:NMHDR,rcSizing
 NMSELCHANGE,nmhdr:NMHDR,stSelStart:SYSTEMTIME,stSelEnd:SYSTEMTIME
+NMTBCUSTOMDRAW,nmcd:NMCUSTOMDRAW,hbrMonoDither,hbrLines,hpenLines,clrText,clrMark,clrTextHighlight,clrBtnFace,clrBtnHighlight,clrHighlightHotTrack,rcText:RECT,nStringBkMode,nHLStringBkMode,iListGap
 NMTBDISPINFO,hdr:NMHDR,dwMask,idCommand,lParam,iImage,pszText,cchText
 NMTBDISPINFOA,hdr:NMHDR,dwMask,idCommand,lParam,iImage,pszText,cchText
 NMTBGETINFOTIP,hdr:NMHDR,pszText,cchTextMax,iItem,lParam
@@ -744,18 +825,25 @@ NMTBHOTITEM,hdr:NMHDR,idOld,idNew,dwFlags
 NMTBRESTORE,hdr:NMHDR,pData,pCurrent,cbData,iItem,cButtons,cbBytesPerRecord,tbButton:TBBUTTON
 NMTBSAVE,hdr:NMHDR,pData,pCurrent,cbData,iItem,cButtons,tbButton:TBBUTTON
 NMTCKEYDOWN,hdr:NMHDR,wVKey,flags
-NMTOOLBAR,hdr:NMHDR,iItem,tbButton:TBBUTTON,cchText,pszText
+NMTOOLBAR,hdr:NMHDR,iItem,tbButton:TBBUTTON,cchText,pszText,rcButton:RECT
 NMTOOLBARA,hdr:NMHDR,iItem,tbButton:TBBUTTON,cchText,pszText,rcButton:RECT
 NMTOOLTIPSCREATED,hdr:NMHDR,hwndToolTips
+NMTRBTHUMBPOSCHANGING,hdr:NMHDR,dwPos,nReason;
 NMTREEVIEW,hdr:NMHDR,action,itemOld:TVITEM,itemNew:TVITEM,ptDrag:POINT
 NMTTCUSTOMDRAW,nmcd:NMCUSTOMDRAW,uDrawFlags
 NMTTDISPINFO,hdr:NMHDR,lpszText,szText,hInst,hinst,uFlags,lParam
 NMTTDISPINFOA,hdr:NMHDR,lpszText,szText,hinst,uFlags,lParam
+NMTVASYNCDRAW,hdr:NMHDR,pimldp,hr,hItem,lParam,dwRetFlags,iRetImageIndex
 NMTVCUSTOMDRAW,nmcd:NMCUSTOMDRAW,clrText,clrTextBk,iLevel
 NMTVDISPINFO,hdr:NMHDR,item:TVITEM
+NMTVDISPINFOEX,hdr:NMHDR,item:TVITEMEX
 NMTVGETINFOTIP,hdr:NMHDR,pszText,cchTextMax,hItem,lParam
 NMTVGETINFOTIPA,hdr:NMHDR,pszText,cchTextMax,hItem,lParam
+NMTVGETINFOTIPW,hdr:NMHDR,pszText,cchTextMax,hItem,lParam
+NMTVITEMCHANGE,hdr:NMHDR,uChanged,hItem,uStateNew,uStateOld,lParam
 NMTVKEYDOWN,hdr:NMHDR,wVKey,flags
+NMTVSTATEIMAGECHANGING,hdr:NMHDR,hti,iOldStateImageIndex,iNewStateImageIndex
+NMVIEWCHANGE,nmhdr:NMHDR,DWORD dwOldView,DWORD dwNewView
 NMUPDOWN,hdr:NMHDR,iPos,iDelta
 NM_LISTVIEW,hdr:NMHDR,iItem,iSubItem,uNewState,uOldState,uChanged,ptAction:POINT,lParam
 NM_TREEVIEW,hdr:NMHDR,action,itemOld:TVITEM,itemNew:TVITEM,ptDrag:POINT
@@ -764,13 +852,15 @@ NONCLIENTMETRICS,cbSize,iBorderWidth,iScrollWidth,iScrollHeight,iCaptionWidth,iC
 NONCLIENTMETRICSA,cbSize,iBorderWidth,iScrollWidth,iScrollHeight,iCaptionWidth,iCaptionHeight,lfCaptionFont:LOGFONTA,iSMCaptionWidth,iSMCaptionHeight,lfSMCaptionFont:LOGFONTA,iMenuWidth,iMenuHeight,lfMenuFont:LOGFONTA,lfStatusFont:LOGFONTA,lfMessageFont:LOGFONTA
 NOTIFICATION,ulEventType,ulAlignPad
 NOTIFKEY,cb,ab
-NOTIFYICONDATA,cbSize,hwnd,uID,uFlags,uCallbackMessage,hIcon,szTip
-NOTIFYICONDATAA,cbSize,hwnd,uID,uFlags,uCallbackMessage,hIcon,szTip
+NOTIFYICONDATA,cbSize,hwnd,uID,uFlags,uCallbackMessage,hIcon,szTip,dwState,dwStateMask,szInfo[256],union:DUMMYUNIONNAME,szInfoTitle[64],dwInfoFlags,guidItem,hBalloonIcon
+NOTIFYICONDATAA,cbSize,hwnd,uID,uFlags,uCallbackMessage,hIcon,szTip,dwState,dwStateMask,szInfo[256],union:DUMMYUNIONNAME,szInfoTitle[64],dwInfoFlags,guidItem,hBalloonIcon
+NOTIFYICONDATAW,cbSize,hwnd,uID,uFlags,uCallbackMessage,hIcon,szTip,dwState,dwStateMask,szInfo[256],union:DUMMYUNIONNAME,szInfoTitle[64],dwInfoFlags,guidItem,hBalloonIcon
 NRESARRAY,cItems,nr:NETRESOURCE
 NT_TIB,ExceptionList,StackBase,StackLimit,SubSystemTib,FiberData,Version,ArbitraryUserPointer,Self
 NUMBERFMT,NumDigits,LeadingZero,Grouping,lpDecimalSep,lpThousandSep,NegativeOrder
 NUMBERFMTA,NumDigits,LeadingZero,Grouping,lpDecimalSep,lpThousandSep,NegativeOrder
 OBJECTID,Lineage:GUID,Uniquifier
+OBJECTPOSITIONS,nmhdr:NMHDR,cObjectCount,pcpPositions
 OBJECT_NOTIFICATION,cbEntryID,lpEntryID,ulObjType,cbParentID,lpParentID,cbOldID,lpOldID,cbOldParentID,lpOldParentID,lpPropTagArray
 OBJECT_TYPE_LIST,Level,Sbz,ObjectType
 OFSTRUCT,cBytes,fFixedDisk,nErrCode,Reserved1,Reserved2,szPathName
@@ -899,15 +989,17 @@ RAS_PPP_PROJECTION_RESULT,nbf:RAS_PPP_NBFCP_RESULT,ip:RAS_PPP_IPCP_RESULT,ipx:RA
 RAS_SERVER_0,TotalPorts,PortsInUse,RasVersion
 RAS_USER_0,bfPrivilege,szPhoneNumber
 RBHITTESTINFO,pt:POINT,flags,iBand
-REBARBANDINFO,cbSize,fMask,fStyle,clrFore,clrBack,lpText,cch,iImage,hwndChild,cxMinChild,cyMinChild,lx,hbmBack,wID,cyChild,cyMaxChild,cyIntegral,cxIdeal,lParam,cxHeader
-REBARBANDINFOA,cbSize,fMask,fStyle,clrFore,clrBack,lpText,cch,iImage,hwndChild,cxMinChild,cyMinChild,lx,hbmBack,wID,cyChild,cyMaxChild,cyIntegral,cxIdeal,lParam,cxHeader
+REBARBANDINFO,cbSize,fMask,fStyle,clrFore,clrBack,lpText,cch,iImage,hwndChild,cxMinChild,cyMinChild,_cx,hbmBack,wID,cyChild,cyMaxChild,cyIntegral,cxIdeal,lParam,cxHeader,rcChevronLocation:RECT,uChevronState
+REBARBANDINFOA,cbSize,fMask,fStyle,clrFore,clrBack,lpText,cch,iImage,hwndChild,cxMinChild,cyMinChild,_cx,hbmBack,wID,cyChild,cyMaxChild,cyIntegral,cxIdeal,lParam,cxHeader,rcChevronLocation:RECT,uChevronState
+REBARBANDINFOW,cbSize,fMask,fStyle,clrFore,clrBack,lpText,cch,iImage,hwndChild,cxMinChild,cyMinChild,_cx,hbmBack,wID,cyChild,cyMaxChild,cyIntegral,cxIdeal,lParam,cxHeader,rcChevronLocation:RECT,uChevronState
 REBARINFO,cbSize,fMask,himl
 RECOVERY_AGENT_INFORMATION,NextEntryOffset,AgentNameLength,AgentInformation
 RECOVERY_AGENT_INFORMATIONA,NextEntryOffset,AgentNameLength,AgentInformation
-RECT,left,top,right,bottom
-RECTL,left,top,right,bottom
+RECT,left:DWORD,top:DWORD,right:DWORD,bottom:DWORD
+RECTL,left:DWORD,top:DWORD,right:DWORD,bottom:DWORD
 REMOTE_NAME_INFO,lpUniversalName,lpConnectionName,lpRemainingPath
 REMOTE_NAME_INFOA,lpUniversalName,lpConnectionName,lpRemainingPath
+REOBJECT,cbStruct,cp,clsid,poleobj,pstg,polesite,sizel,dvaspect,dwFlags,dwUser
 REPARSE_DATA_BUFFER,ReparseTag,ReparseDataLength,Reserved,SymbolicLinkReparseBuffer.SubstituteNameOffset,SymbolicLinkReparseBuffer.SubstituteNameLength,SymbolicLinkReparseBuffer.PrintNameOffset,SymbolicLinkReparseBuffer.PrintNameLength,SymbolicLinkReparseBuffer.PathBuffer,MountPointReparseBuffer.SubstituteNameOffset,MountPointReparseBuffer.SubstituteNameLength,MountPointReparseBuffer.PrintNameOffset,MountPointReparseBuffer.PrintNameLength,MountPointReparseBuffer.PathBuffer,GenericReparseBuffer.DataBuffer
 REPARSE_GUID_DATA_BUFFER,ReparseTag,ReparseDataLength,Reserved,ReparseGuid:GUID,GenericReparseBuffer.DataBuffer
 REPARSE_POINT_INFORMATION,ReparseDataLength,UnparsedNameLength
@@ -929,6 +1021,7 @@ RGBQUAD,rgbBlue,rgbGreen,rgbRed,rgbReserved
 RGBTRIPLE,rgbtBlue,rgbtGreen,rgbtRed
 RGNDATA,rdh:RGNDATAHEADER,Buffer
 RGNDATAHEADER,dwSize,iType,nCount,nRgnSize,rcBound:RECT
+RICHEDIT_IMAGE_PARAMETERS,xWidth,yHeight,Ascent,Type,pwszAlternateText,pIStream
 RIP_INFO,dwError,dwType
 RTL_CRITICAL_SECTION,DebugInfo,LockCount,RecursionCount,OwningThread,LockSemaphore,SpinCount
 RTL_CRITICAL_SECTION_DEBUG,Type1,CreatorBackTraceIndex,CriticalSection,ProcessLocksList:LIST_ENTRY,EntryCount,ContentionCount,Spare
@@ -944,6 +1037,7 @@ SAppTimeArray,cValues,lpat
 SBinary,cb,lpb
 SBinaryArray,cValues,lpbin
 SBitMaskRestriction,relBMR,ulPropTag,ulMask
+SCROLLBARINFO,cbSize,rcScrollBar:RECT,dxyLineButton,xyThumbTop,xyThumbBottom,reserved,rgstate
 SCROLLINFO,cbSize,fMask,nMin,nMax,nPage,nPos,nTrackPos
 SCommentRestriction,cValues,lpRes,lpProp
 SComparePropsRestriction,relop,ulPropTag1,ulPropTag2
@@ -1138,6 +1232,10 @@ SSubRestriction,ulSubObject,lpRes
 STACKFRAME,AddrPC:ADDRESS,AddrReturn:ADDRESS,AddrFrame:ADDRESS,AddrStack:ADDRESS,FuncTableEntry,Params,Far1,Virtual,Reserved,KdHelp:KDHELP
 STARTUPINFO,cb,lpReserved,lpDesktop,lpTitle,dwX,dwY,dwXSize,dwYSize,dwXCountChars,dwYCountChars,dwFillAttribute,dwFlags,wShowWindow,cbReserved2,lpReserved2,hStdInput,hStdOutput,hStdError
 STARTUPINFOA,cb,lpReserved,lpDesktop,lpTitle,dwX,dwY,dwXSize,dwYSize,dwXCountChars,dwYCountChars,dwFillAttribute,dwFlags,wShowWindow,cbReserved2,lpReserved2,hStdInput,hStdOutput,hStdError
+STARTUPINFOW,cb,lpReserved,lpDesktop,lpTitle,dwX,dwY,dwXSize,dwYSize,dwXCountChars,dwYCountChars,dwFillAttribute,dwFlags,wShowWindow,cbReserved2,lpReserved2,hStdInput,hStdOutput,hStdError
+STARTUPINFOEX,StartupInfo,lpAttributeList
+STARTUPINFOEXA,StartupInfo,lpAttributeList
+STARTUPINFOEXW,StartupInfo,lpAttributeList
 STATUS_OBJECT_NOTIFICATION,cbEntryID,lpEntryID,cValues,lpPropVals
 STAT_SERVER_0,sts0_start,sts0_fopens,sts0_devopens,sts0_jobsqueued,sts0_sopens,sts0_stimedout,sts0_serrorout,sts0_pwerrors,sts0_permerrors,sts0_syserrors,sts0_bytessent_low,sts0_bytessent_high,sts0_bytesrcvd_low,sts0_bytesrcvd_high,sts0_avresponse,sts0_reqbufneed,sts0_bigbufneed
 STAT_WORKSTATION_0,stw0_start,stw0_numNCB_r,stw0_numNCB_s,stw0_numNCB_a,stw0_fiNCB_r,stw0_fiNCB_s,stw0_fiNCB_a,stw0_fcNCB_r,stw0_fcNCB_s,stw0_fcNCB_a,stw0_sesstart,stw0_sessfailcon,stw0_sessbroke,stw0_uses,stw0_usefail,stw0_autorec,stw0_bytessent_r_lo,stw0_bytessent_r_hi,stw0_bytesrcvd_r_lo,stw0_bytesrcvd_r_hi,stw0_bytessent_s_lo,stw0_bytessent_s_hi,stw0_bytesrcvd_s_lo,stw0_bytesrcvd_s_hi,stw0_bytessent_a_lo,stw0_bytessent_a_hi,stw0_bytesrcvd_a_lo,stw0_bytesrcvd_a_hi,stw0_reqbufneed,stw0_bigbufneed
@@ -1170,10 +1268,11 @@ TAPE_SET_MEDIA_PARAMETERS,BlockSize
 TAPE_SET_POSITION,Method,Partition,Offset1,Immediate
 TAPE_WRITE_MARKS,Type1,Count,Immediate
 TBADDBITMAP,hInst,nID
-TBBUTTON,iBitmap,idCommand,fsState,fsStyle,_wPad1,dwData,iString
+TBBUTTON,iBitmap,idCommand,fsState,fsStyle,bReserved,dwData,iString
 TBBUTTONINFO,cbSize,dwMask,idCommand,iImage,fsState,fsStyle,lx,lParam,pszText,cchText
 TBBUTTONINFOA,cbSize,dwMask,idCommand,iImage,fsState,fsStyle,lx,lParam,pszText,cchText
 TBINSERTMARK,iButton,dwFlags
+TBMETRICS,cbSize,dwMask,cxPad,cyPad,cxBarPad,cyBarPad,cxButtonSpacing,cyButtonSpacing
 TBNOTIFY,hdr:NMHDR,iItem,tbButton:TBBUTTON,cchText,pszText
 TBREPLACEBITMAP,hInstOld,nIdOld,hInstNew,nIdNew,nButtons
 TBSAVEPARAMS,hkr,pszSubKey,pszValueName
@@ -1189,6 +1288,7 @@ TEXTMETRIC,tmHeight,tmAscent,tmDescent,tmInternalLeading,tmExternalLeading,tmAve
 TEXTMETRICA,tmHeight,tmAscent,tmDescent,tmInternalLeading,tmExternalLeading,tmAveCharWidth,tmMaxCharWidth,tmWeight,tmOverhang,tmDigitizedAspectX,tmDigitizedAspectY,tmFirstChar,tmLastChar,tmDefaultChar,tmBreakChar,tmItalic,tmUnderlined,tmStruckOut,tmPitchAndFamily,tmCharSet
 TEXTRANGE,chrg:CHARRANGE,lpstrText
 TEXTRANGEA,chrg:CHARRANGE,lpstrText
+TEXTRANGEW,chrg:CHARRANGE,lpstrText
 THREADENTRY32,dwSize,cntUsage,th32ThreadID,th32OwnerProcessID,tpBasePri,tpDeltaPri,dwFlags
 TIMECAPS,wPeriodMin,wPeriodMax
 TIMESTAMP_STRUCT,year,month,day,hour,minute,second,fraction
@@ -1204,22 +1304,26 @@ TOKEN_PRIMARY_GROUP,PrimaryGroup
 TOKEN_PRIVILEGES,PrivilegeCount,Privileges:LUID_AND_ATTRIBUTES
 TOKEN_SOURCE,SourceName,SourceIdentifier:LUID
 TOKEN_USER,User:SID_AND_ATTRIBUTES
-TOOLINFO,cbSize,uFlags,hWnd,uId,rect:RECT,hInst,lpszText,lParam
+TOOLINFO,cbSize,uFlags,hWnd,uId,rect:RECT,hInst,lpszText,lParam,lpReserved
 TOOLTIPTEXT,hdr:NMHDR,lpszText,szText,hInst,hinst,uFlags,lParam
 TPMPARAMS,cbSize,rcExclude:RECT
 TRACKMOUSEEVENT,cbSize,dwFlags,hwndTrack,dwHoverTime
 TRIVERTEX,x,y,Red,Green,Blue,Alpha
+TTGETTITLE,dwSize,uTitleBitmap,cch,pszTitle
 TTHITTESTINFO,hwnd,pt:POINT,ti:TTTOOLINFOA
 TTHITTESTINFOA,hwnd,pt:POINT,ti:TTTOOLINFOA
 TTPOLYCURVE,wType,cpfx,apfx:POINTFX
 TTPOLYGONHEADER,cb,dwType,pfxStart:POINTFX
-TTTOOLINFO,cbSize,uFlags,hwnd,uId,rect:RECT,hinst,lpszText,lParam
-TTTOOLINFOA,cbSize,uFlags,hwnd,uId,rect:RECT,hinst,lpszText,lParam
+TTTOOLINFO,cbSize,uFlags,hwnd,uId,rect:RECT,hinst,lpszText,lParam,lpReserved
+TTTOOLINFOA,cbSize,uFlags,hwnd,uId,rect:RECT,hinst,lpszText,lParam,lpReserved
 TT_HITTESTINFO,hWnd,pt:POINT,ti:TOOLINFO
 TVHITTESTINFO,pt:POINT,flags,hItem
+TVGETITEMPARTRECTINFO,hti,prc,partID
+TVINSERTSTRUCT,hParent,hInsertAfter,itemex:TVITEMEX,item:TV_ITEM
 TVITEM,_mask,hItem,state,stateMask,pszText,cchTextMax,iImage,iSelectedImage,cChildren,lParam
 TVITEMA,_mask,hItem,state,stateMask,pszText,cchTextMax,iImage,iSelectedImage,cChildren,lParam
-TVITEMEX,imask,hItem,state,stateMask,pszText,cchTextMax,iImage,iSelectedImage,cChildren,lParam,iIntegral
+TVITEMW,_mask,hItem,state,stateMask,pszText,cchTextMax,iImage,iSelectedImage,cChildren,lParam
+TVITEMEX,_mask,hItem,state,stateMask,pszText,cchTextMax,iImage,iSelectedImage,cChildren,lParam,iIntegral
 TVSORTCB,hParent,lpfnCompare,lParam
 TV_DISPINFO,hdr:NMHDR,item:TVITEM
 TV_HITTESTINFO,pt:POINT,flags,hItem
