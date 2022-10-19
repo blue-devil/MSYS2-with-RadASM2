@@ -1,0 +1,2 @@
+#include "Res/ColorChooseRes.rc"
+#include "Res/ColorChooseDlg.rc"

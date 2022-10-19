@@ -1,0 +1,660 @@
+_abs64,__int64 num
+_access,const char *path,int amode
+_assert,const unsigned char *expr,const unsigned char *filename,unsigned int lineno
+_atoi64,const unsigned char *nptr
+_beep,unsigned int dwFrequency,unsigned int dwDuration
+_c_exit,void 
+_cenvarg,const char *const *argv ,const char *const *envp ,char **argblk ,char **envblk ,const char *name
+_cexit,void 
+_cgets,unsigned char *string
+_cgetws,unsigned short *string
+_chdir,const char *path
+_chdrive,int drive
+_chmod,const char *path,int mode
+_chsize,int filedes,long size
+_chvalidator,int c,int mask
+_cinit,int initFloatingPrecision
+_close,int fh
+_commit,int filedes
+_cprintf,const unsigned char *format,etc
+_cputs,const unsigned char *string
+_cputws,const unsigned short *str
+_creat,const char *path,int pmode
+_cscanf,const unsigned char *format,etc
+_ctime64,const __int64 *timp
+_cwait,int *stat_loc,int process_id,int action_code
+_cwild,void 
+_cwprintf,const unsigned short *format,etc
+_cwscanf,const unsigned short *format,etc
+_dosmaperr,unsigned long oserrno
+_dospawn,int mode,const char *name,char *cmdblk,char *envblk
+_dup,int fh
+_dup2,int fh1,int fh2
+_ecvt,double value,int ndigit,int *decpt,int *sign
+_eof,int filedes
+_errno,void 
+_execl,const char *filename,const char *arglist,etc
+_execle,const char *filename,const char *arglist,etc
+_execlp,const char *filename,const char *arglist,etc
+_execlpe,const char *filename,const char *arglist,etc
+_execv,const char *filename,const char *const *argvector 
+_execve,const char *name,const char *const *argv ,const char *const *envp 
+_execvp,const char *filename,const char *const *argvector 
+_execvpe,const char *filename,const char *const *argvector ,const char *const *envptr 
+_exit,int code
+_expand,void *pBlock,unsigned int newsize
+_fcloseall,void 
+_fcvt,double value,int ndec,int *decpt,int *sign
+_fdopen,int filedes,const char *mode
+_fgetchar,void 
+_fgetwchar,void 
+_filbuf,struct _iobuf *str
+_filelength,int filedes
+_filelengthi64,int filedes
+_fileno,struct _iobuf *stream
+_filwbuf,struct _iobuf *str
+_findclose,int hFile
+_findfirst,const char *szWild,struct _finddata_t *pfd
+_findfirst64,const char *szWild,struct __finddata64_t *pfd
+_findfirsti64,const char *szWild,struct _finddatai64_t *pfd
+_findnext,int hFile,struct _finddata_t *pfd
+_findnext64,int hFile,struct __finddata64_t *pfd
+_findnexti64,int hFile,struct _finddatai64_t *pfd
+_flsbuf,int ch,struct _iobuf *str
+_flswbuf,int ch,struct _iobuf *str
+_flush,struct _iobuf *str
+_flushall,void 
+_fpcvt,struct _strflt *pflt,int digits,int *decpt,int *sign
+_fptostr,unsigned char *buf,int digits,struct _strflt *pflt
+_fptrap,void 
+_fputchar,int ch
+_fputwchar,unsigned short ch
+_free_osfhnd,int fh
+_freebuf,struct _iobuf *stream
+_fseeki64,struct _iobuf *str,__int64 offset,int whence
+_fsopen,const char *file,const char *mode,int shflag
+_fstat,int fildes,struct _stat *buf
+_fstat64,int fildes,struct __stat64 *buf
+_fstati64,int fildes,struct _stati64 *buf
+_ftbuf,int flag,struct _iobuf *str
+_ftelli64,struct _iobuf *str
+_ftime,struct _timeb *tp
+_ftime64,struct __timeb64 *tp
+_fullpath,char *UserBuf,const char *path,unsigned int maxlen
+_futime,int fh,struct _utimbuf *times
+_futime64,int fh,struct __utimbuf64 *times
+_gcvt,double value,int ndec,unsigned char *buf
+_get_heap_handle,void 
+_get_old_sbh_threshold,void 
+_get_osfhandle,int fh
+_get_sbh_threshold,void 
+_getbuf,struct _iobuf *str
+_getch,void 
+_getche,void 
+_getcwd,char *pnbuf,int maxlen
+_getdcwd,int drive,char *pnbuf,int maxlen
+_getdiskfree,unsigned int uDrive,struct _diskfree_t *pdf
+_getdrive,void 
+_getdrives,void
+_getmaxstdio,void 
+_getmbcp,void 
+_getpath,const char *src,char *dst,unsigned int maxlen
+_getpid,void 
+_getstream,void 
+_getsystime,struct tm *ptm
+_getw,struct _iobuf *str
+_getwch,void 
+_getwche,void 
+_getws,unsigned short *string
+_gmtime64,const __int64 *timp
+_heap_abort,void 
+_heap_alloc,unsigned int size
+_heap_init,int mtflag
+_heap_term,void 
+_heapadd,void *block,unsigned int size
+_heapchk,void 
+_heapmin,void 
+_heapset,unsigned int _fill
+_heapused,unsigned int *pUsed,unsigned int *pCommit
+_heapwalk,struct _heapinfo *_entry
+_hextodec,unsigned short chr
+_i64toa,__int64 val,unsigned char *buf,int radix
+_i64tow,__int64 val,unsigned short *buf,int radix
+_initterm,void ,**pfbegin ),void),void ,**pfend ),void)
+_input,struct _iobuf *stream,const unsigned char *format,unsigned char *arglist
+_ioinit,void 
+_ioterm,void 
+_isatty,int fh
+_isctype,int c,int mask
+_isindst,struct tm *tb
+_ismbbalnum,unsigned int tst
+_ismbbalpha,unsigned int tst
+_ismbbgraph,unsigned int tst
+_ismbbkalnum,unsigned int tst
+_ismbbkana,unsigned int tst
+_ismbbkprint,unsigned int tst
+_ismbbkpunct,unsigned int tst
+_ismbblead,unsigned int tst
+_ismbbprint,unsigned int tst
+_ismbbpunct,unsigned int tst
+_ismbbtrail,unsigned int tst
+_ismbcalnum,unsigned int c
+_ismbcalpha,unsigned int c
+_ismbcdigit,unsigned int c
+_ismbcgraph,unsigned int c
+_ismbchira,unsigned int c
+_ismbckata,unsigned int c
+_ismbcl0,unsigned int c
+_ismbcl1,unsigned int c
+_ismbcl2,unsigned int c
+_ismbclegal,unsigned int c
+_ismbclower,unsigned int c
+_ismbcprint,unsigned int c
+_ismbcpunct,unsigned int c
+_ismbcspace,unsigned int c
+_ismbcsymbol,unsigned int c
+_ismbcupper,unsigned int c
+_ismbslead,const unsigned char *string,const unsigned char *current
+_ismbstrail,const unsigned char *string,const unsigned char *current
+_itoa,int val,unsigned char *buf,int radix
+_itow,int val,unsigned short *buf,int radix
+_kbhit,void 
+_lfind,const void *key,const void *base,unsigned int *num,unsigned int width,int ,*compare),const void *,const void *)
+_loaddll,unsigned char *szName
+_localtime64,const __int64 *ptime
+_locking,int fh,int lmode,long nbytes
+_lrotl,unsigned long val,int shift
+_lrotr,unsigned long val,int shift
+_lsearch,const void *key,void *base,unsigned int *num,unsigned int width,int ,*compare),const void *,const void *)
+_lseek,int fh,long pos,int mthd
+_lseeki64,int fh,__int64 pos,int mthd
+_ltoa,long val,unsigned char *buf,int radix
+_ltow,long val,unsigned short *buf,int radix
+_make_time_t,struct tm *tb,int ultflag
+_makepath,char *path,const char *drive,const char *dir,const char *fname,const char *ext
+_matherr,struct _exception *pexcept
+_mbbtombc,unsigned int c
+_mbbtype,unsigned char c,int ctype
+_mbccpy,unsigned char *dst,const unsigned char *src
+_mbcjistojms,unsigned int c
+_mbcjmstojis,unsigned int c
+_mbclen,const unsigned char *c
+_mbctohira,unsigned int c
+_mbctokata,unsigned int c
+_mbctolower,unsigned int c
+_mbctombb,unsigned int c
+_mbctoupper,unsigned int c
+_mbsbtype,const unsigned char *string,unsigned int len
+_mbschr,const unsigned char *string,unsigned int c
+_mbscmp,const unsigned char *s1,const unsigned char *s2
+_mbscoll,const unsigned char *s1,const unsigned char *s2
+_mbscspn,const unsigned char *string,const unsigned char *charset
+_mbsdec,const unsigned char *string,const unsigned char *current
+_mbsicmp,const unsigned char *s1,const unsigned char *s2
+_mbsicoll,const unsigned char *s1,const unsigned char *s2
+_mbsinc,const unsigned char *current
+_mbslen,const unsigned char *s
+_mbslwr,unsigned char *string
+_mbsnbcat,unsigned char *dst,const unsigned char *src,unsigned int cnt
+_mbsnbcmp,const unsigned char *s1,const unsigned char *s2,unsigned int n
+_mbsnbcnt,const unsigned char *string,unsigned int ccnt
+_mbsnbcoll,const unsigned char *s1,const unsigned char *s2,unsigned int n
+_mbsnbcpy,unsigned char *dst,const unsigned char *src,unsigned int cnt
+_mbsnbicmp,const unsigned char *s1,const unsigned char *s2,unsigned int n
+_mbsnbicoll,const unsigned char *s1,const unsigned char *s2,unsigned int n
+_mbsnbset,unsigned char *string,unsigned int val,unsigned int count
+_mbsncat,unsigned char *dst,const unsigned char *src,unsigned int cnt
+_mbsnccnt,const unsigned char *string,unsigned int bcnt
+_mbsncmp,const unsigned char *s1,const unsigned char *s2,unsigned int n
+_mbsncoll,const unsigned char *s1,const unsigned char *s2,unsigned int n
+_mbsncpy,unsigned char *dst,const unsigned char *src,unsigned int cnt
+_mbsnextc,const unsigned char *s
+_mbsnicmp,const unsigned char *s1,const unsigned char *s2,unsigned int n
+_mbsnicoll,const unsigned char *s1,const unsigned char *s2,unsigned int n
+_mbsninc,const unsigned char *string,unsigned int ccnt
+_mbsnset,unsigned char *string,unsigned int val,unsigned int count
+_mbspbrk,const unsigned char *string,const unsigned char *charset
+_mbsrchr,const unsigned char *str,unsigned int c
+_mbsrev,unsigned char *string
+_mbsset,unsigned char *string,unsigned int val
+_mbsspn,const unsigned char *string,const unsigned char *charset
+_mbsspnp,const unsigned char *string,const unsigned char *charset
+_mbsstr,const unsigned char *str1,const unsigned char *str2
+_mbstok,unsigned char *string,const unsigned char *sepset
+_mbstrlen,const unsigned char *s
+_mbsupr,unsigned char *string
+_memccpy,void *dest,const void *src,int c,unsigned int count
+_memicmp,const void *first,const void *last,unsigned int count
+_mkdir,const char *path
+_mkgmtime,struct tm *tb
+_mkgmtime64,struct tm *tb
+_mktemp,char *template
+_mktime64,struct tm *tb
+_msize,void *pblock
+_nh_malloc,unsigned int size,int nhFlag
+_open,const char *path,int oflag,etc
+_open_osfhandle,int osfhandle,int flags
+_openfile,const char *filename,const char *mode,int shflag,struct _iobuf *str
+_output,struct _iobuf *stream,const unsigned char *format,unsigned char *argptr
+_pclose,struct _iobuf *pstream
+_pipe,int *phandles,unsigned int psize,int textmode
+_popen,const char *cmdstring,const char *type
+_print_tiddata,unsigned long tid
+_purecall,void 
+_putch,int c
+_putenv,const char *option
+_putw,int word,struct _iobuf *str
+_putwch,unsigned short ch
+_putws,const unsigned short *string
+_read,int fh,void *buf,unsigned int cnt
+_read,void 
+_resetstkoflw,void 
+_rmdir,const char *path
+_rmtmp,void 
+_rotl,unsigned int val,int shift
+_rotl64,unsigned __int64 val,int shift
+_rotr,unsigned int val,int shift
+_rotr64,unsigned __int64 val,int shift
+_scprintf,const unsigned char *format,etc
+_scwprintf,const unsigned short *format,etc
+_searchenv,const char *fname,const char *env_var,char *path
+_set_error_mode,int em
+_set_old_sbh_threshold,unsigned int threshold
+_set_osfhnd,int fh,int value
+_set_sbh_threshold,unsigned int threshold
+_setargv,void 
+_setdefaultprecision,void
+_setenvp,void 
+_seterrormode,int mode
+_setlocale_get_all,void 
+_setlocale_set_cat,int category,const unsigned char *locale
+_setmaxstdio,int maxnum
+_setmbcp,int codepage
+_setmode,int fh,int mode
+_setsystime,struct tm *ptm,unsigned int uMilliseconds
+_sleep,unsigned long dwDuration
+_snprintf,unsigned char *string,unsigned int count,const unsigned char *format,etc
+_snscanf,const unsigned char *string,unsigned int count,const unsigned char *format,etc
+_snwprintf,unsigned short *string,unsigned int count,const unsigned short *format,etc
+_snwscanf,const unsigned short *string,unsigned int count,const unsigned short *format,etc
+_sopen,const char *path,int oflag,int shflag,etc
+_spawnl,int modeflag,const char *pathname,const char *arglist,etc
+_spawnle,int modeflag,const char *pathname,const char *arglist,etc
+_spawnlp,int modeflag,const char *filename,const char *arglist,etc
+_spawnlpe,int modeflag,const char *filename,const char *arglist,etc
+_spawnv,int modeflag,const char *pathname,const char *const *argv 
+_spawnve,int mode,const char *name,const char *const *argv ,const char *const *envp 
+_spawnvp,int modeflag,const char *filename,const char *const *argv 
+_spawnvpe,int modeflag,const char *filename,const char *const *argv ,const char *const *envptr 
+_splitpath,const char *path,char *drive,char *dir,char *fname,char *ext
+_stat,const char *name,struct _stat *buf
+_stat64,const char *name,struct __stat64 *buf
+_stati64,const char *name,struct _stati64 *buf
+_stbuf,struct _iobuf *str
+_store_num,int num,int digits,unsigned char **out ,unsigned int *count,unsigned int no_lead_zeros
+_store_number,int num,unsigned char **out ,unsigned int *count
+_store_str,unsigned char *in,unsigned char **out ,unsigned int *count
+_strcats,unsigned char *outstr,int n,etc
+_strdate,char *buffer
+_strdec,const unsigned char *_cpc1,const unsigned char *_cpc2
+_strdup,const unsigned char *string
+_strerror,const unsigned char *message
+_stricmp,const unsigned char *dst,const unsigned char *src
+_stricoll,const unsigned char *_string1,const unsigned char *_string2
+_strinc,const unsigned char *_pc
+_stripquote,char *src
+_strlwr,unsigned char *string
+_strncnt,const unsigned char *_cpc,unsigned int _sz
+_strncoll,const unsigned char *_string1,const unsigned char *_string2,unsigned int count
+_strnextc,const unsigned char *_cpc
+_strnicmp,const unsigned char *dst,const unsigned char *src,unsigned int count
+_strnicoll,const unsigned char *_string1,const unsigned char *_string2,unsigned int count
+_strninc,const unsigned char *_pc,unsigned int _sz
+_strnset,unsigned char *string,int val,unsigned int count
+_strrev,unsigned char *string
+_strset,unsigned char *string,int val
+_strspnp,const unsigned char *_cpc1,const unsigned char *_cpc2
+_strtime,char *buffer
+_strtoi64,const unsigned char *nptr,unsigned char **endptr ,int ibase
+_strtoui64,const unsigned char *nptr,unsigned char **endptr ,int ibase
+_strupr,unsigned char *string
+_swab,unsigned char *src,unsigned char *dest,int nbytes
+_tell,int filedes
+_telli64,int filedes
+_tempnam,const char *dir,const char *pfx
+_time64,__int64 *timeptr
+_tolower,int c
+_toupper,int c
+_tzset,void 
+_ui64toa,unsigned __int64 val,unsigned char *buf,int radix
+_ui64tow,unsigned __int64 val,unsigned short *buf,int radix
+_ultoa,unsigned long val,unsigned char *buf,int radix
+_ultow,unsigned long val,unsigned short *buf,int radix
+_umask,int mode
+_un_inc,int chr
+_un_inc,int chr,struct _iobuf *fileptr
+_un_inc,unsigned short chr
+_un_inc,unsigned short chr,struct _iobuf *fileptr
+_ungetch,int c
+_ungetwch,unsigned short c
+_unlink,const char *path
+_unloaddll,int hMod
+_utime,const char *fname,struct _utimbuf *times
+_utime64,const char *fname,struct __utimbuf64 *times
+_validdrive,unsigned int drive
+_vscprintf,const unsigned char *format,unsigned char *ap
+_vscwprintf,const unsigned short *format,unsigned char *ap
+_vsnprintf,unsigned char *string,unsigned int count,const unsigned char *format,unsigned char *ap
+_vsnwprintf,unsigned short *string,unsigned int count,const unsigned short *format,unsigned char *ap
+_waccess,const unsigned short *path,int amode
+_wasctime,const struct tm *tb
+_wcenvarg,const unsigned short *const *argv ,const unsigned short *const *envp ,unsigned short **argblk ,unsigned short **envblk ,const unsigned short *name
+_wchartodigit,unsigned short ch
+_wchdir,const unsigned short *path
+_wchmod,const unsigned short *path,int mode
+_wcreat,const unsigned short *path,int pmode
+_wcsdec,const unsigned short *_cpc1,const unsigned short *_cpc2
+_wcsdup,const unsigned short *string
+_wcserror,int errnum
+_wcsicmp,const unsigned short *dst,const unsigned short *src
+_wcsicoll,const unsigned short *_string1,const unsigned short *_string2
+_wcsinc,const unsigned short *_pc
+_wcslwr,unsigned short *wsrc
+_wcsncnt,const unsigned short *_cpc,unsigned int _sz
+_wcsncoll,const unsigned short *_string1,const unsigned short *_string2,unsigned int count
+_wcsnextc,const unsigned short *_cpc
+_wcsnicmp,const unsigned short *first,const unsigned short *last,unsigned int count
+_wcsnicoll,const unsigned short *_string1,const unsigned short *_string2,unsigned int count
+_wcsninc,const unsigned short *_pc,unsigned int _sz
+_wcsnset,unsigned short *string,unsigned short val,unsigned int count
+_wcsrev,unsigned short *string
+_wcsset,unsigned short *string,unsigned short val
+_wcsspnp,const unsigned short *_cpc1,const unsigned short *_cpc2
+_wcstoi64,const unsigned short *nptr,unsigned short **endptr ,int ibase
+_wcstoui64,const unsigned short *nptr,unsigned short **endptr ,int ibase
+_wcsupr,unsigned short *wsrc
+_wctime,const long *timp
+_wctime64,const __int64 *timp
+_wcwild,void 
+_wdospawn,int mode,const unsigned short *name,unsigned short *cmdblk,unsigned short *envblk
+_wexecl,const unsigned short *filename,const unsigned short *arglist,etc
+_wexecle,const unsigned short *filename,const unsigned short *arglist,etc
+_wexeclp,const unsigned short *filename,const unsigned short *arglist,etc
+_wexeclpe,const unsigned short *filename,const unsigned short *arglist,etc
+_wexecv,const unsigned short *filename,const unsigned short *const *argvector 
+_wexecve,const unsigned short *name,const unsigned short *const *argv ,const unsigned short *const *envp 
+_wexecvp,const unsigned short *filename,const unsigned short *const *argvector 
+_wexecvpe,const unsigned short *filename,const unsigned short *const *argvector ,const unsigned short *const *envptr 
+_wfdopen,int filedes,const unsigned short *mode
+_wfindfirst,const unsigned short *szWild,struct _wfinddata_t *pfd
+_wfindfirst64,const unsigned short *szWild,struct __wfinddata64_t *pfd
+_wfindfirsti64,const unsigned short *szWild,struct _wfinddatai64_t *pfd
+_wfindnext,int hFile,struct _wfinddata_t *pfd
+_wfindnext64,int hFile,struct __wfinddata64_t *pfd
+_wfindnexti64,int hFile,struct _wfinddatai64_t *pfd
+_wfopen,const unsigned short *file,const unsigned short *mode
+_wfreopen,const unsigned short *filename,const unsigned short *mode,struct _iobuf *str
+_wfsopen,const unsigned short *file,const unsigned short *mode,int shflag
+_wfullpath,unsigned short *UserBuf,const unsigned short *path,unsigned int maxlen
+_wgetcwd,unsigned short *pnbuf,int maxlen
+_wgetdcwd,int drive,unsigned short *pnbuf,int maxlen
+_wgetenv,const unsigned short *option
+_wgetpath,const unsigned short *src,unsigned short *dst,unsigned int maxlen
+_whiteout,int *counter
+_whiteout,int *counter,struct _iobuf *fileptr
+_wincmdln,void 
+_winput,struct _iobuf *stream,const unsigned short *format,unsigned char *arglist
+_wmakepath,unsigned short *path,const unsigned short *drive,const unsigned short *dir,const unsigned short *fname,const unsigned short *ext
+_wmkdir,const unsigned short *path
+_wmktemp,unsigned short *template
+_wopen,const unsigned short *path,int oflag,etc
+_wopenfile,const unsigned short *filename,const unsigned short *mode,int shflag,struct _iobuf *str
+_woutput,struct _iobuf *stream,const unsigned short *format,unsigned char *argptr
+_wperror,const unsigned short *wmessage
+_wpopen,const unsigned short *cmdstring,const unsigned short *type
+_wputenv,const unsigned short *option
+_wremove,const unsigned short *path
+_wrename,const unsigned short *oldname,const unsigned short *newname
+_write,int fh,const void *buf,unsigned int cnt
+_wrmdir,const unsigned short *path
+_wsearchenv,const unsigned short *fname,const unsigned short *env_var,unsigned short *path
+_wsetargv,void 
+_wsetenvp,void 
+_wsetlocale,int _category,const unsigned short *_wlocale
+_wsopen,const unsigned short *path,int oflag,int shflag,etc
+_wspawnl,int modeflag,const unsigned short *pathname,const unsigned short *arglist,etc
+_wspawnle,int modeflag,const unsigned short *pathname,const unsigned short *arglist,etc
+_wspawnlp,int modeflag,const unsigned short *filename,const unsigned short *arglist,etc
+_wspawnlpe,int modeflag,const unsigned short *filename,const unsigned short *arglist,etc
+_wspawnv,int modeflag,const unsigned short *pathname,const unsigned short *const *argv 
+_wspawnve,int mode,const unsigned short *name,const unsigned short *const *argv ,const unsigned short *const *envp 
+_wspawnvp,int modeflag,const unsigned short *filename,const unsigned short *const *argv 
+_wspawnvpe,int modeflag,const unsigned short *filename,const unsigned short *const *argv ,const unsigned short *const *envptr 
+_wsplitpath,const unsigned short *path,unsigned short *drive,unsigned short *dir,unsigned short *fname,unsigned short *ext
+_wstat,const unsigned short *name,struct _stat *buf
+_wstat64,const unsigned short *name,struct __stat64 *buf
+_wstati64,const unsigned short *name,struct _stati64 *buf
+_wstrdate,unsigned short *buffer
+_wstripquote,unsigned short *src
+_wstrtime,unsigned short *buffer
+_wsystem,const unsigned short *command
+_wtempnam,const unsigned short *dir,const unsigned short *pfx
+_wtmpnam,unsigned short *s
+_wtof,const unsigned short *ptr
+_wtoi,const unsigned short *nptr
+_wtoi64,const unsigned short *nptr
+_wtol,const unsigned short *nptr
+_wunlink,const unsigned short *path
+_wutime,const unsigned short *fname,struct _utimbuf *times
+_wutime64,const unsigned short *fname,struct __utimbuf64 *times
+_wwincmdln,void 
+abort,void 
+abs,int number
+asctime,const struct tm *tb
+atexit,void ,*func),void)
+atof,const unsigned char *nptr
+atoi,const unsigned char *nptr
+atol,const unsigned char *nptr
+bsearch,const void *key,const void *base,unsigned int num,unsigned int width,int ,FUNC *compare
+btowc,int c
+calloc,unsigned int num,unsigned int size
+clearerr,struct _iobuf *stream
+clock,void 
+ctime,const long *timp
+difftime,long b,long a
+div,int numer,int denom
+doexit,int code,int quick,int retcaller
+exit,int code
+extend_ioinfo_arrays,int fh
+fclose,struct _iobuf *str
+feof,struct _iobuf *stream
+ferror,struct _iobuf *stream
+fflush,struct _iobuf *str
+fgetc,struct _iobuf *stream
+fgetpos,struct _iobuf *stream,__int64 *pos
+fgets,char *string,int count,struct _iobuf *str
+fgetwc,struct _iobuf *stream
+fgetws,unsigned short *string,int count,struct _iobuf *str
+find,char *pattern
+findenv,const char *name,int len
+flsall,int flushflag
+fopen,const char *file,const char *mode
+fprintf,struct _iobuf *str,const unsigned char *format,etc
+fputc,int ch,struct _iobuf *str
+fputs,const unsigned char *string,struct _iobuf *stream
+fputwc,unsigned short ch,struct _iobuf *str
+fputws,const unsigned short *string,struct _iobuf *stream
+fread,void *buffer,unsigned int size,unsigned int num,struct _iobuf *stream
+free,void *pblock
+freopen,const char *filename,const char *mode,struct _iobuf *str
+fscanf,struct _iobuf *stream,const unsigned char *format,etc
+fseek,struct _iobuf *str,long offset,int whence
+fsetpos,struct _iobuf *stream,const __int64 *pos
+ftell,struct _iobuf *str
+fwprintf,struct _iobuf *str,const unsigned short *format,etc
+fwrite,const void *buffer,unsigned int size,unsigned int num,struct _iobuf *stream
+fwscanf,struct _iobuf *stream,const unsigned short *format,etc
+genfname,char *fname
+getc,struct _iobuf *stream
+getchar,void 
+getenv,const char *option
+gets,unsigned char *string
+getwc,struct _iobuf *stream
+getwchar,void 
+gmtime,const long *timp
+input,const unsigned short *format,unsigned char *arglist
+isalnum,int c
+isalpha,int c
+iscntrl,int c
+isdigit,int c
+isgraph,int c
+isleadbyte,int c
+islower,int c
+isprint,int c
+ispunct,int c
+isspace,int c
+isupper,int c
+iswalnum,unsigned short c
+iswalpha,unsigned short c
+iswascii,unsigned short c
+iswcntrl,unsigned short c
+iswctype,unsigned short c,unsigned short mask
+iswdigit,unsigned short c
+iswgraph,unsigned short c
+iswlower,unsigned short c
+iswprint,unsigned short c
+iswpunct,unsigned short c
+iswspace,unsigned short c
+iswupper,unsigned short c
+iswxdigit,unsigned short c
+isxdigit,int c
+labs,long lnumber
+ldiv,long numer,long denom
+localeconv,void 
+localtime,const long *ptime
+main,int argc,unsigned char **argv 
+make__time64_t,struct tm *tb,int ultflag
+malloc,unsigned int size
+match,char *arg,char *ptr
+mblen,const unsigned char *s,unsigned int n
+mbrlen,const unsigned char *s,unsigned int n,int *pst
+mbrtowc,unsigned short *pwc,const unsigned char *s,unsigned int n,int *pst
+mbsrtowcs,unsigned short *wcs,const unsigned char **ps ,unsigned int n,int *pst
+mbstowcs,unsigned short *pwcs,const unsigned char *s,unsigned int n
+mbtowc,unsigned short *pwc,const unsigned char *s,unsigned int n
+memchr,const void *buf,int chr,unsigned int cnt
+memcmp,const void *buf1,const void *buf2,unsigned int count
+memcpy,void *dst,const void *src,unsigned int count
+memmove,void *dst,const void *src,unsigned int count
+memset,void *dst,int val,unsigned int count
+mktime,struct tm *tb
+output,const unsigned char *format,unsigned char *argptr
+perror,const unsigned char *message
+printf,const unsigned char *format,etc
+putc,int ch,struct _iobuf *str
+putchar,int ch
+puts,const unsigned char *string
+putwc,unsigned short ch,struct _iobuf *str
+putwchar,unsigned short ch
+qsort,void *base,unsigned int num,unsigned int width,int ,FUNC *comp
+raise,int signum
+rand,void 
+read,void 
+realloc,void *pblock,unsigned int newsize
+remove,const char *path
+rename,const char *oldname,const char *newname
+report_failure,void 
+rewind,struct _iobuf *str
+scanf,const unsigned char *format,etc
+setbuf,struct _iobuf *stream,unsigned char *buffer
+setlocale,int _category,const unsigned char *_locale
+setvbuf,struct _iobuf *str,unsigned char *buffer,int type,unsigned int size
+sort,struct argnode *first
+sprintf,unsigned char *string,const unsigned char *format,etc
+srand,unsigned int seed
+sscanf,const unsigned char *string,const unsigned char *format,etc
+strcat,unsigned char *dst,const unsigned char *src
+strchr,const unsigned char *string,int ch
+strcmp,const unsigned char *src,const unsigned char *dst
+strcoll,const unsigned char *_string1,const unsigned char *_string2
+strcpy,unsigned char *dst,const unsigned char *src
+strcspn,const unsigned char *string,const unsigned char *control
+strerror,int errnum
+strftime,unsigned char *string,unsigned int maxsize,const unsigned char *format,const struct tm *timeptr
+strlen,const unsigned char *str
+strncat,unsigned char *front,const unsigned char *back,unsigned int count
+strncmp,const unsigned char *first,const unsigned char *last,unsigned int count
+strncnt,const unsigned char *string,int cnt
+strncpy,unsigned char *dest,const unsigned char *source,unsigned int count
+strpbrk,const unsigned char *string,const unsigned char *control
+strrchr,const unsigned char *string,int ch
+strspn,const unsigned char *string,const unsigned char *control
+strstr,const unsigned char *str1,const unsigned char *str2
+strtod,const unsigned char *nptr,unsigned char **endptr 
+strtok,unsigned char *string,const unsigned char *control
+strtol,const unsigned char *nptr,unsigned char **endptr ,int ibase
+strtoul,const unsigned char *nptr,unsigned char **endptr ,int ibase
+strtoxl,const unsigned char *nptr,const unsigned char **endptr ,int ibase,int flags
+strtoxq,const unsigned char *nptr,const unsigned char **endptr ,int ibase,int flags
+strxfrm,unsigned char *_string1,const unsigned char *_string2,unsigned int _count
+swap,unsigned char *a,unsigned char *b,unsigned int width
+swprintf,unsigned short *string,const unsigned short *format,etc
+swscanf,const unsigned short *string,const unsigned short *format,etc
+system,const char *command
+time,long *timeptr
+tmpfile,void 
+tmpnam,char *s
+tolower,int c
+toupper,int c
+towctrans,unsigned short c,unsigned short val
+towlower,unsigned short c
+towupper,unsigned short c
+ungetc,int ch,struct _iobuf *str
+ungetwc,unsigned short ch,struct _iobuf *str
+vfprintf,struct _iobuf *str,const unsigned char *format,unsigned char *ap
+vfwprintf,struct _iobuf *str,const unsigned short *format,unsigned char *ap
+vprintf,const unsigned char *format,unsigned char *ap
+vsprintf,unsigned char *string,const unsigned char *format,unsigned char *ap
+vswprintf,unsigned short *string,const unsigned short *format,unsigned char *ap
+vwprintf,const unsigned short *format,unsigned char *ap
+wadd,unsigned short *arg
+wcrtomb,unsigned char *s,unsigned short wchar,int *pst
+wcscat,unsigned short *dst,const unsigned short *src
+wcschr,const unsigned short *string,unsigned short ch
+wcscmp,const unsigned short *src,const unsigned short *dst
+wcscoll,const unsigned short *_string1,const unsigned short *_string2
+wcscpy,unsigned short *dst,const unsigned short *src
+wcscspn,const unsigned short *string,const unsigned short *control
+wcsftime,unsigned short *wstring,unsigned int maxsize,const unsigned short *wformat,const struct tm *timeptr
+wcslen,const unsigned short *wcs
+wcsncat,unsigned short *front,const unsigned short *back,unsigned int count
+wcsncmp,const unsigned short *first,const unsigned short *last,unsigned int count
+wcsncnt,const unsigned short *string,int cnt
+wcsncnt,const unsigned short *string,unsigned int cnt
+wcsncpy,unsigned short *dest,const unsigned short *source,unsigned int count
+wcspbrk,const unsigned short *string,const unsigned short *control
+wcsrchr,const unsigned short *string,unsigned short ch
+wcsrtombs,unsigned char *s,const unsigned short **pwcs ,unsigned int n,int *pst
+wcsspn,const unsigned short *string,const unsigned short *control
+wcsstr,const unsigned short *wcs1,const unsigned short *wcs2
+wcstod,const unsigned short *nptr,unsigned short **endptr 
+wcstok,unsigned short *string,const unsigned short *control
+wcstol,const unsigned short *nptr,unsigned short **endptr ,int ibase
+wcstombs,unsigned char *s,const unsigned short *pwcs,unsigned int n
+wcstoul,const unsigned short *nptr,unsigned short **endptr ,int ibase
+wcstoxl,const unsigned short *nptr,const unsigned short **endptr ,int ibase,int flags
+wcstoxq,const unsigned short *nptr,const unsigned short **endptr ,int ibase,int flags
+wcsxfrm,unsigned short *_string1,const unsigned short *_string2,unsigned int _count
+wctob,unsigned short wchar
+wctomb,unsigned char *s,unsigned short wchar
+wctrans,const unsigned char *name
+wctype,const unsigned char *name
+wfind,unsigned short *pattern
+wfindenv,const unsigned short *name,int len
+wgenfname,unsigned short *fname
+wmatch,unsigned short *arg,unsigned short *ptr
+wparse_cmdline,unsigned short *cmdstart,unsigned short **argv ,unsigned short *args,int *numargs,int *numchars
+wprintf,const unsigned short *format,etc
+wscanf,const unsigned short *format,etc
+wsort,struct argnode *first
+xtoa,unsigned long val,unsigned char *buf,unsigned int radix,int is_neg
