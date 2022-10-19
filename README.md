@@ -25,7 +25,6 @@ pacman -S mingw-w64-i686-toolchain
 RadASM setup is easy:
 * Extract [RadASM2][web-github-radasm2-release] to wherever you want.
 * Extract the files i have listed below to RadASM folder:
-* 
 ```
 RadASM\MINGW32.ini
 RadASM\MINGW64.ini
@@ -34,7 +33,6 @@ RadASM\Addins
 ```
 
 * Open `RadASM.ini` with your fav editor and add `MINGW32` and `MINGW64` under `Assembler` section; look at the sample below:
-* 
 ```
 [Assembler]
 Assembler=MINGW32,MINGW64,MASM64,masm,UASM32,UASM64,nasm,mingw
