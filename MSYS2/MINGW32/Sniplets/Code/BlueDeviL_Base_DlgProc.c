@@ -18,11 +18,11 @@
    | @tester   : ErrorInside <errorinside@sctzine.com>                    |
    | @IDE      : RadASM v2.2.2.4                                          |
    | @template : Blue DeviL                                               |
-   | @date     : 14/10/2022                                               |
+   | @date     : 21/10/2022                                               |
    | @license  : GPLv3                                                    |
    |______________________________________________________________________|
    |                                                                      |
-   |          MINGW64 C Programming - BlueDeviL's Code Sniplets           |
+   |          MINGW32 C Programming - BlueDeviL's Code Sniplets           |
    |                      Base DlgProc Code Sniplet                       |
    \______________________________________________________________________/
 */

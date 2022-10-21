@@ -18,63 +18,92 @@
    | @tester   : ErrorInside <errorinside@sctzine.com>                    |
    | @IDE      : RadASM v2.2.2.4                                          |
    | @template : Blue DeviL                                               |
-   | @date     : 14/10/2022                                               |
+   | @date     : 21/10/2022                                               |
    | @license  : GPLv3                                                    |
    |______________________________________________________________________|
    |                                                                      |
-   |          MINGW64 C Programming - BlueDeviL's Code Sniplets           |
-   |                      Base DlgProc Code Sniplet                       |
+   |          MINGW32 C Programming - BlueDeviL's Code Sniplets           |
+   |                      Base WndProc Code Sniplet                       |
    \______________________________________________________________________/
 */
 #include <windows.h>
 
-//_________________________________________________________________________
-//constant variables
-#define IDD_DIALOG      1000
-
-//_________________________________________________________________________
-//function prototypes
-
-INT_PTR DlgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-
-
-//_________________________________________________________________________
-//uninitialized variables
-
-HINSTANCE hInst;
-HICON hIcon;
-
+const char ClassName[]  =   "BaseWin32Class";
 const char WindowName[] =   "[SCT] Window Title";
 
 
-INT_PTR
-DlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
+LRESULT CALLBACK
+WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     switch(uMsg)
     {
-        case WM_INITDIALOG:
-            hIcon = LoadIcon(hInst, MAKEINTRESOURCE(5001));
-            SendMessage(hDlg, WM_SETICON, ICON_SMALL, (LPARAM)hIcon);
-            SetWindowText(hDlg, WindowName);
-            return TRUE;
-            
-        case WM_COMMAND:
-            
+        case WM_DESTROY:
+            PostQuitMessage(0);
             break;
-            
-        case WM_CLOSE:
-            EndDialog(hDlg, 0);
-            break;
+        default:
+            return DefWindowProc(hWnd,uMsg,wParam,lParam);
     }
     
-    return FALSE;
+    return 0;
 }
 
 int WINAPI
 WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-    hInst = hInstance;
-    DialogBoxParam(hInstance, MAKEINTRESOURCE(IDD_DIALOG), NULL, DlgProc, 0);
+    WNDCLASSEX wcex;
+    HWND hWnd;
+    MSG msg;
+    
+    wcex.cbSize         = sizeof(WNDCLASSEX);
+    wcex.style          = 0;
+    wcex.lpfnWndProc    = WndProc;
+    wcex.cbClsExtra     = 0;
+    wcex.cbWndExtra     = 0;
+    wcex.hInstance      = hInstance;
+    wcex.hIcon          = LoadIcon(NULL, IDI_APPLICATION);
+    wcex.hCursor        = LoadCursor(NULL, IDC_ARROW);
+    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
+    wcex.lpszMenuName   = NULL;
+    wcex.lpszClassName  = ClassName;
+    wcex.hIconSm        = LoadIcon(NULL, IDI_APPLICATION);
+    
+    if(!RegisterClassEx(&wcex))
+    {
+        const char lpMessage[] = "Window Registration Failed!";
+        const char lpCaption[] = "[SCT] Error!";
+        MessageBox(NULL, lpMessage, lpCaption,MB_OK | MB_ICONEXCLAMATION);
+        return 0;
+    }
+    
+    hWnd = CreateWindowEx(
+            WS_EX_CLIENTEDGE, \
+            ClassName, \
+            WindowName, \
+            WS_OVERLAPPEDWINDOW, \
+            CW_USEDEFAULT, \
+            CW_USEDEFAULT, \
+            CW_USEDEFAULT, \
+            CW_USEDEFAULT, \
+            NULL, \
+            NULL, \
+            hInstance, \
+            NULL);
+    if(hWnd == NULL)
+    {
+        const char lpMessage[] = "Window Creation Failed!";
+        const char lpCaption[] = "[SCT] Error!";
+        MessageBox(NULL, lpMessage, lpCaption,MB_OK | MB_ICONEXCLAMATION);
+        return 0;
+    }
+    
+    ShowWindow(hWnd, nCmdShow);
+    UpdateWindow(hWnd);
+    
+    while(GetMessage(&msg, NULL, 0, 0) > 0)
+    {
+        TranslateMessage(&msg);
+        DispatchMessage(&msg);
+    }
     
     return 0;
 }

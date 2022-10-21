@@ -1,3 +1,42 @@
+;  _______________________________________________________________________
+; |  ______ __           ,.'   __.'.__  .   ______               ___      |
+; | |      |  |          /b`  '-.   .-'  d\|      ;             |   |     |
+; | |   __ |  |         .5h     /.'.\    =5|   _   \            |   |     |
+; | |.  1 \|  |         (0=h    '   '    =C)   1\   \        .--:.  |     |
+; | |   1_/|  |         ?3==,          .==7|   | \   \       |__|   |     |
+; | |.     |  .-- -.-----{=`==oo____oo==`=}|   |  |.----.-- -.--:.  |     |
+; | |.  __ |  |  V |  ^__|'"o58888888888,; |.  |  ||  ^_|  V |  |.  |     |
+; | |:  1 \|__|____|_____| `?88P^\,?88^\P  |.  | / |____|\___|__|:  |___  |
+; | |:  1_/   /             C8?\__d88\_/'  |:  1/   / .         |:  1   | |
+; | |::.. .  /              `8o8888/\88P   |::.. . /            |::.. . | |
+; | `-------'                '7oo88oo8P    `------'             `-------' |
+; |                      Cooo##~\/\/\/~====>        github.com/blue-devil |
+; |                                                  gitlab.com/bluedevil |
+; | Freedom doesn't come from second-hand thoughts.       www.sctzine.com |
+; |_______________________________________________________________________|
+; | @author   : Blue DeviL <bluedevil@sctzine.com>                        |
+; | @tester   : ErrorInside <errorinside@sctzine.com>                     |
+; | @IDE      : RadASM v2.2.2.4                                           |
+; | @template : Blue DeviL                                                |
+; | @date     : 21/10/2022                                                |
+; | @license  : GPLv3                                                     |
+; |_______________________________________________________________________|
+; |                                                                       |
+; |            WinAPI Functions for RadASM2 with MSYS2/MINGW32            |
+; |                                                                       |
+; | This file contains WinAPI functions from M$ Docs with their           |
+; | parameters. With this file RadASM2 can code complete and              |
+; | help developer with a tooltip shows parameters of that function.      |
+; |                                                                       |
+; | This file can also contain some common functions from C runtime  or   |
+; | other third party libraries.                                          |
+; |                                                                       |
+; | TODO: If this file gets bigger make a separate file for other funcs.  |
+; \_______________________________________________________________________/
+;  _______________________________________________________________________ 
+; |                                                                       |
+; |                                WINAPI                                 |
+; |_______________________________________________________________________|
 AbortDoc,hdc
 AbortPath,hdc
 AbortPrinter,hPrinter
@@ -132,6 +171,8 @@ ApplyPatchToFile,PatchFileName,OldFileName,NewFileName,ApplyOptionFlags
 ApplyPatchToFileByHandles,PatchFileHandle,OldFileHandle,NewFileHandle,ApplyOptionFlags
 ApplyPatchToFileByHandlesEx,PatchFileHandle,OldFileHandle,NewFileHandle,ApplyOptionFlags,ProgressCallback,CallbackContext
 ApplyPatchToFileEx,PatchFileName,OldFileName,NewFileName,ApplyOptionFlags,ProgressCallback,CallbackContext
+ArgCl,ArgNum,ItemBuffer
+ArgClC,ArgNum,ItemBuffer
 Arc,hdc,X1,Y1,X2,Y2,X3,Y3,X4,Y4
 ArcTo,hdc,X1,Y1,X2,Y2,X3,Y3,X4,Y4
 AreAllAccessesGranted,GrantedAccess,DesiredAccess
@@ -1556,6 +1597,7 @@ GetCharWidth,hdc,wFirstChar,wLastChar,lpBuffer
 GetCharWidth32,hdc,iFirstChar,iLastChar,lpBuffer
 GetCharWidthFloat,hdc,iFirstChar,iLastChar,pxBuffer
 GetCharWidthI,hdc,uint,uint,lpword,lpint
+GetCl,ArgNum,ItemBuffer
 GetClassFile,szFilename,pclsid
 GetClassFileOrMime,pbc,szFilename,pBuffer,cbSize,szMime,dwReserved,pclsid
 GetClassIDFromBlob,hBlob,pOwnerName,pCategoryName,pTagName,pclsid
@@ -4480,6 +4522,7 @@ ReadConsoleInput,hConsoleInput,lpBuffer,nLength,lpNumberOfEventsRead
 ReadConsoleOutput,hConsoleOutput,lpBuffer,dwBufferSize,dwBufferCoord,lpReadRegion
 ReadConsoleOutputAttribute,hConsoleOutput,lpAttribute,nLength,dwReadCoord,lpNumberOfAttrsRead
 ReadConsoleOutputCharacter,hConsoleOutput,lpCharacter,nLength,dwReadCoord,lpNumberOfCharsRead
+ReadDirectoryChangesW,hDirectory,lpBuffer,nBufferLength,bWatchSubtree,dwNotifyFilter,lpBytesReturned,lpOverlapped,lpCompletionRoutine
 ReadEncryptedFileRaw,pfExportCallback,pvCallbackContext,pvContext
 ReadEventLog,hEventLog,dwReadFlags,dwRecordOffset,lpBuffer,nNumberOfBytesToRead,pnBytesRead,pnMinNumberOfBytesNeeded
 ReadFile,hFile,lpBuffer,nNumberOfBytesToRead,lpNumberOfBytesRead,lpOverlapped

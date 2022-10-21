@@ -1,12 +1,15 @@
 # Changelog
 
-## [2022.10.14] - 14-10-2022
+## [2022.10.21] - 21-10-2022
 ### Added
 * ADDED: Perfect MemCpy, MemCmp, MemCat functions
+* ADDED: *StructWord.api files added
+* ADDED: Code sniplets added to MINGW32
 
 ### Changes
 * UPDATE: Types section in ini files are updated with windows data types
 * UPDATE: Debug parameters are updated with no dynamic base
+* UPDATE: *.api files updated and fixed
 
 ## [2022.09.06] - 06-09-2022
 ### Added
